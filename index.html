@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>NARCOWORLD</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo upper">NARCOWORLD</div>
+        <a href="https://discord.gg/6T6umbqra8" class="discord-btn" target="_blank" rel="noopener">
+            <img src="https://imgs.search.brave.com/ESA8Flm6fNcnrADLLFjC_4ro-V3PVZ3l6ck2ge08Qak/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvcHJl/dmlld3MvMDY1LzM4/Ni81NDEvbm9uXzJ4/L2Rpc2NvcmQtd2hp/dGUtaWNvbi1sb2dv/LWFwcC10cmFuc3Bh/cmVudC1iYWNrZ3Jv/dW5kLXByZW1pdW0t/c29jaWFsLW1lZGlh/LWRlc2lnbi1mb3It/ZGlnaXRhbC1kb3du/bG9hZC1mcmVlLXBu/Zy5wbmc" draggable="false">
+        </a>
+    </nav>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+          const logoBtn = document.querySelector(".logo.upper");
+
+          logoBtn.addEventListener("click", () => {
+              window.location.href = "index.html"; // go back to home page
+          });
+      });
+    </script>
+
+    <!-- HERO / TABS -->
+    <section class="hero">
+        <div>
+            <h1 class="upper">NARCOWORLD</h1>
+            <div class="sub upper">"Australian Underground"</div>
+
+            <div class="tab-buttons">
+                <button onclick="openPage('store')" class="sub link tab-btn" data-page="store" disabled>
+                    Store
+                </button>
+
+                <button onclick="openPage('artists')" class="sub link tab-btn" data-page="artists">
+                    Artists
+                </button>
+
+                <button onclick="openPage('tours')" class="sub link tab-btn" data-page="tours">
+                    Tours
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee">
+        <div class="marquee-track" id="marquee-track">
+            <span class="upper">@NARCOWORLD</span>
+            <span class="upper">@ethxnblxd</span>
+            <span class="upper">@lijhe</span>
+        </div>
+    </div>
+
+    <section id="store" class="page-section store" style="display:none;">
+        <div class="store-grid">
+
+            <a href="#" class="product-card">
+                <img src="assets/store/NARCOWORLD SHIRT 1 WHITE.png" draggable="false" />
+                <span class="product-name">NARCOWORLD T-Shirt (Style 1) White </span>
+                <p class="product-price">$25.00</p>
+            </a>
+
+            <a href="#" class="product-card">
+                <img src="assets/store/NARCOWORLD SHIRT 1 BLACK.png" draggable="false" />
+                <span class="product-name">NARCOWORLD T-Shirt (Style 1) Black</span>
+                <p class="product-price">$25.00</p>
+            </a>
+
+            <a href="#" class="product-card">
+                <img src="assets/store/NARCOWORLD SHIRT 2 WHITE.png" draggable="false" />
+                <span class="product-name">NARCOWORLD T-Shirt (Style 2) White</span>
+                <p class="product-price">$25.00</p>
+            </a>
+
+            <a href="#" class="product-card">
+                <img src="assets/store/NARCOWORLD SHIRT 2 BLACK.png" draggable="false" />
+                <span class="product-name">NARCO WORLD T-Shirt (Style 2) Black</span>
+                <p class="product-price">$25.00</p>
+            </a>
+
+
+            <a href="#" class="product-card">
+                <img src="assets/store/NARCOWORLD ZIP-UP HOODIE 1 WHITE.png" draggable="false" />
+                <span class="product-name">NARCOWORLD Zip-up Hoodie (Style 1) White</span>
+                <p class="product-price">$20.00</p>
+            </a>
+
+            <a href="#" class="product-card">
+                <img src="assets/store/NARCOWORLD ZIP-UP HOODIE 1 BLACK.png" draggable="false" />
+                <span class="product-name">NARCOWORLD Zip-up Hoodie (Style 1) Black</span>
+                <p class="product-price">$25.00</p>
+            </a>
+
+            <a href="#" class="product-card">
+                <img src="assets/store/NARCOWORLD ZIP-UP HOODIE 1 WHITE.png" draggable="false" />
+                <span class="product-name">NARCOWORLD Zip-up Hoodie (Style 2) White</span>
+                <p class="product-price">$25.00</p>
+            </a>
+
+            <a href="#" class="product-card">
+                <img src="assets/store/NARCOWORLD ZIP-UP HOODIE 1 BLACK.png" draggable="false" />
+                <span class="product-name">NARCOWORLD Zip-up Hoodie (Style 2) Black</span>
+                <p class="product-price">$25.00</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- ARTISTS -->
+    <section id="artists" class="page-section artists" style="display:none;">
+        <div class="artist-grid">
+
+            <a href="members/ethxnblxd.html" class="artist-card">
+                <img src="assets/artists/ethxnblxd.jpg" draggable="false" />
+                <span class="artist-name">@ethxnblxd</span>
+            </a>
+
+            <a href="members/lijhe.html" class="artist-card">
+                <img src="assets/artists/lijhe.png" draggable="false" />
+                <span class="artist-name">@lijhe</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- TOURS -->
+    <section id="tours" class="page-section tours" style="display:none;">
+        <div class="tour-cards">
+            <div class="tour-card">
+                <div class="tour-left">
+                    <span class="tour-date">N/A</span>
+                    <span class="tour-year">N/A</span>
+                </div>
+
+                <div class="tour-middle">
+                    <h3>N/A</h3>
+                    <p>N/A</p>
+                </div>
+
+                <a href="#" class="tour-btn">No Tours Scheduled Currently.</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="marquee marquee-footer">
+        <div class="marquee-track">
+            <span class="upper">@NARCOWORLD</span>
+            <span class="upper">@ethxnblxd</span>
+            <span class="upper">@lijhe</span>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="upper">
+        © 2026 NARCOWORLD. All rights reserved. <br>
+        Designed by ethxnblxd. <br>
+    </footer>
+
+    <!-- TAB LOGIC -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Function to open a specific page
+            function openPage(pageId) {
+                // Hide all pages
+                document.querySelectorAll(".page-section").forEach(section => {
+                    section.style.display = "none";
+                });
+
+                // Show the active page
+                const activePage = document.getElementById(pageId);
+                if (activePage) {
+                    activePage.style.display = "block";
+                }
+
+                // Remove 'active' class from all buttons
+                document.querySelectorAll(".tab-btn").forEach(button => {
+                    button.classList.remove("active");
+                });
+
+                // Add 'active' class to the clicked button
+                const activeButton = document.querySelector(`button[data-page="${pageId}"]`);
+                if (activeButton) {
+                    activeButton.classList.add("active");
+                }
+            }
+
+            // Default tab
+            openPage("artists");
+
+            const defaultButton = document.querySelector('button[data-page="artists"]');
+            if (defaultButton) {
+                defaultButton.classList.add("active");
+            }
+
+            // Add event listeners to all tab buttons
+            document.querySelectorAll('.tab-btn').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const pageId = e.target.getAttribute('data-page');
+                    openPage(pageId);
+                });
+            });
+        });
+    </script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const speed = 1; // pixels per frame
+
+        // Animate all marquees
+        document.querySelectorAll(".marquee-track").forEach(track => {
+            // Duplicate content to ensure continuous scrolling
+            const originalHTML = track.innerHTML;
+            while (track.scrollWidth < window.innerWidth * 3) {
+                track.innerHTML += originalHTML;
+            }
+
+            let x = 0;
+
+            function animate() {
+                x -= speed;
+                if (Math.abs(x) >= track.scrollWidth / 2) {
+                    x = 0;
+                }
+                track.style.transform = `translateX(${x}px)`;
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+        });
+    });
+    </script>
+</body>
+</html>

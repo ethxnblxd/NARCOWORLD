@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>NARCOWORLD | @ethxnblxd</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ethxnblxd.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo upper">NARCOWORLD</div>
+        <a href="https://discord.gg/6T6umbqra8" class="discord-btn" target="_blank" rel="noopener">
+            <img src="https://imgs.search.brave.com/ESA8Flm6fNcnrADLLFjC_4ro-V3PVZ3l6ck2ge08Qak/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvcHJl/dmlld3MvMDY1LzM4/Ni81NDEvbm9uXzJ4/L2Rpc2NvcmQtd2hp/dGUtaWNvbi1sb2dv/LWFwcC10cmFuc3Bh/cmVudC1iYWNrZ3Jv/dW5kLXByZW1pdW0t/c29jaWFsLW1lZGlh/LWRlc2lnbi1mb3It/ZGlnaXRhbC1kb3du/bG9hZC1mcmVlLXBu/Zy5wbmc" draggable="false">
+        </a>
+    </nav>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+          const logoBtn = document.querySelector(".logo.upper");
+
+          logoBtn.addEventListener("click", () => {
+              window.location.href = "../index.html"; // go back to home page
+          });
+      });
+    </script>
+
+    <!-- MARQUEE -->
+    <div class="marquee">
+        <div class="marquee-track" id="marquee-track">
+            <span class="upper">@NARCOWORLD</span>
+            <span class="upper">@ethxnblxd</span>
+            <span class="upper">@lijhe</span>
+        </div>
+    </div>
+
+    <!-- LATEST RELEASE -->
+    <div class="latest-release">
+        <h2 class="upper">Latest Release</h2>
+        <a href="https://distrokid.com/hyperfollow/ethxnblxdlijhe/distro-kids?ref=release" target="_blank" class="release-card horizontal">
+            <img src="https://i.scdn.co/image/ab67616d0000b273f49dc5d06e55d042bdbaa9a9" class="release-img" draggable="false"/>
+            <div class="release-content">
+                <h3 class="release-title">distro kids</h3>
+                <p class="release-artists">Single • ethxnblxd, lijhe</p>
+                <br>
+                <p class="click-to-open">Available Now!</p>
+            </div>
+        </a>
+    </div>
+
+    <!-- STORE GRID -->
+    <div class="store">
+        <h2 class="upper">Store</h2>
+        <div class="store-grid">
+            <a href="#" class="product-card">
+                <img src="../assets/store/vinyl.png" draggable="false" />
+                <span class="product-name">PRODUCT TEMPLATE 1</span>
+                <p class="product-price">$0.00</p>
+            </a>
+
+            <a href="#" class="product-card">
+                <img src="../assets/store/vinyl.png" draggable="false" />
+                <span class="product-name">PRODUCT TEMPLATE 2</span>
+                <p class="product-price">$0.00</p>
+            </a>
+
+            <a href="#" class="product-card">
+                <img src="../assets/store/vinyl.png" draggable="false" />
+                <span class="product-name">PRODUCT TEMPLATE 3</span>
+                <p class="product-price">$0.00</p>
+            </a>
+
+            <a href="#" class="product-card">
+                <img src="../assets/store/vinyl.png" draggable="false" />
+                <span class="product-name">PRODUCT TEMPLATE 4</span>
+                <p class="product-price">$0.00</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- FOOTER MARQUEE -->
+    <div class="marquee marquee-footer">
+        <div class="marquee-track">
+            <span class="upper">@NARCOWORLD</span>
+            <span class="upper">@ethxnblxd</span>
+            <span class="upper">@lijhe</span>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="upper">
+        © 2026 NARCOWORLD. All rights reserved. <br>
+        Designed by ethxnblxd. <br>
+    </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const speed = 1; // pixels per frame
+
+        // Animate all marquees
+        document.querySelectorAll(".marquee-track").forEach(track => {
+            const originalHTML = track.innerHTML;
+            while (track.scrollWidth < window.innerWidth * 3) {
+                track.innerHTML += originalHTML;
+            }
+
+            let x = 0;
+
+            function animate() {
+                x -= speed;
+                if (Math.abs(x) >= track.scrollWidth / 2) {
+                    x = 0;
+                }
+                track.style.transform = `translateX(${x}px)`;
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+        });
+    });
+    </script>
+</body>
+</html>
