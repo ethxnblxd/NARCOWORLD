@@ -22,7 +22,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: url("assets/artists/ethxnblxd-background.jpg") center/cover no-repeat;
+  background: url("assets/artists/ethxnblxd/background.jpg") center/cover no-repeat;
   filter: blur(80px);
   z-index: -2;
 }
