@@ -462,12 +462,6 @@ footer {
 }
 
 @media (max-width: 700px) {
-
-    /* General spacing */
-    .section {
-        padding: 4rem 1rem;
-    }
-
     /* Store */
     .store {
         padding: 4rem 1rem;
@@ -549,10 +543,6 @@ footer {
         margin-top: 120px; /* was 370px */
     }
 
-    .artists {
-        margin-top: 120px; /* was 370px */
-    }
-
     /* HERO TEXT SCALING (like .upper) */
     .hero h1 {
         font-size: clamp(2rem, 8vw, 3rem);
@@ -569,8 +559,12 @@ footer {
     }
 
     .hero {
-        margin-top: -40px;
-        margin-bottom: 22rem; /* increase bottom margin */
+        margin-top: -20px;
+    }
+
+    .artists {
+        margin-top: -50px;
+        margin-bottom: -18px;
     }
 
     .artist-card {
@@ -594,5 +588,27 @@ footer {
         width: 100%;
         max-width: 400px; /* limit max width for buttons container */
         box-sizing: border-box;
+    }
+
+    #tours {
+        padding-top: 2rem;
+        padding-bottom: 7.90rem;
+    }
+
+    .tour-card {
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        max-width: 400px;
+    }
+
+    .tour-btn {
+        padding: 0px;
+        margin-left: -5px;
+        max-width: 170px;
+        font-size: 0.8em;
+        align-items: center;
+        align-content: center;
+        text-align: center;
     }
 }
