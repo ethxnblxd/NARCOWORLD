@@ -4,30 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>NARCOWORLD</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
     <nav>
         <div class="logo upper">NARCOWORLD</div>
+        <!--
         <a href="https://discord.gg/6T6umbqra8" class="discord-btn" target="_blank" rel="noopener">
             <img src="https://imgs.search.brave.com/ESA8Flm6fNcnrADLLFjC_4ro-V3PVZ3l6ck2ge08Qak/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvcHJl/dmlld3MvMDY1LzM4/Ni81NDEvbm9uXzJ4/L2Rpc2NvcmQtd2hp/dGUtaWNvbi1sb2dv/LWFwcC10cmFuc3Bh/cmVudC1iYWNrZ3Jv/dW5kLXByZW1pdW0t/c29jaWFsLW1lZGlh/LWRlc2lnbi1mb3It/ZGlnaXRhbC1kb3du/bG9hZC1mcmVlLXBu/Zy5wbmc" draggable="false">
         </a>
+        -->
     </nav>
 
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-          const logoBtn = document.querySelector(".logo.upper");
+        window.addEventListener('wheel', function(event) {
+            if (event.ctrlKey) {
+                event.preventDefault();
+            }
+        }, { passive: false });
 
-          logoBtn.addEventListener("click", () => {
-              window.location.href = ""; // go back to home page
-          });
-      });
+        document.addEventListener("DOMContentLoaded", () => {
+            const logoBtn = document.querySelector(".logo.upper");
+
+            logoBtn.addEventListener("click", () => {
+                window.location.href = "";
+            });
+        });
     </script>
 
-    <!-- HERO / TABS -->
+    <div class="marquee">
+        <div class="marquee-track" id="marquee-track">
+            <span class="upper">@NARCOWORLD</span>
+            <span class="upper">@ethxnblxd</span>
+            <span class="upper">@lijhe</span>
+        </div>
+    </div>
+
     <section class="hero">
         <div>
             <h1 class="upper">NARCOWORLD</h1>
@@ -49,75 +63,51 @@
         </div>
     </section>
 
-    <!-- MARQUEE -->
-    <div class="marquee">
-        <div class="marquee-track" id="marquee-track">
-            <span class="upper">@NARCOWORLD</span>
-            <span class="upper">@ethxnblxd</span>
-            <span class="upper">@lijhe</span>
-        </div>
-    </div>
-
     <section id="store" class="page-section store" style="display:none;">
+        <!-- NEEDS AN ACTUAL FUNCTIONING STORE EMBEDDED IN THE FUTURE. -->
         <div class="store-grid">
+            <a href="#" class="product-card">
+                <img src="assets/store/vinyl.png" draggable="false" />
+                <span class="product-name">NARCOWORLD T-SHIRT</span>
+                <p class="product-price">$0.00</p>
+            </a>
 
             <a href="#" class="product-card">
-                <img src="assets/store/NARCOWORLD SHIRT 1 WHITE.png" draggable="false" />
-                <span class="product-name">NARCOWORLD T-Shirt (Style 1) White </span>
+                <img src="assets/store/vinyl.png" draggable="false" />
+                <span class="product-name">NARCOWORLD T-SHIRT 2.0</span>
+                <p class="product-price">$0.00</p>
+            </a>
+
+            <a href="#" class="product-card">
+                <img src="assets/store/vinyl.png" draggable="false" />
+                <span class="product-name">NARCOWORLD SWEATPANTS</span>
                 <p class="product-price">$25.00</p>
             </a>
 
             <a href="#" class="product-card">
-                <img src="assets/store/NARCOWORLD SHIRT 1 BLACK.png" draggable="false" />
-                <span class="product-name">NARCOWORLD T-Shirt (Style 1) Black</span>
-                <p class="product-price">$25.00</p>
+                <img src="assets/store/vinyl.png" draggable="false" />
+                <span class="product-name">NARCOWORLD HOODIE</span>
+                <p class="product-price">$0.00</p>
             </a>
 
             <a href="#" class="product-card">
-                <img src="assets/store/NARCOWORLD SHIRT 2 WHITE.png" draggable="false" />
-                <span class="product-name">NARCOWORLD T-Shirt (Style 2) White</span>
-                <p class="product-price">$25.00</p>
+                <img src="assets/store/vinyl.png" draggable="false" />
+                <span class="product-name">NARCOWORLD HOODIE 2.0</span>
+                <p class="product-price">$0.00</p>
             </a>
 
             <a href="#" class="product-card">
-                <img src="assets/store/NARCOWORLD SHIRT 2 BLACK.png" draggable="false" />
-                <span class="product-name">NARCO WORLD T-Shirt (Style 2) Black</span>
-                <p class="product-price">$25.00</p>
-            </a>
-
-
-            <a href="#" class="product-card">
-                <img src="assets/store/NARCOWORLD ZIP-UP HOODIE 1 WHITE.png" draggable="false" />
-                <span class="product-name">NARCOWORLD Zip-up Hoodie (Style 1) White</span>
-                <p class="product-price">$20.00</p>
-            </a>
-
-            <a href="#" class="product-card">
-                <img src="assets/store/NARCOWORLD ZIP-UP HOODIE 1 BLACK.png" draggable="false" />
-                <span class="product-name">NARCOWORLD Zip-up Hoodie (Style 1) Black</span>
-                <p class="product-price">$25.00</p>
-            </a>
-
-            <a href="#" class="product-card">
-                <img src="assets/store/NARCOWORLD ZIP-UP HOODIE 1 WHITE.png" draggable="false" />
-                <span class="product-name">NARCOWORLD Zip-up Hoodie (Style 2) White</span>
-                <p class="product-price">$25.00</p>
-            </a>
-
-            <a href="#" class="product-card">
-                <img src="assets/store/NARCOWORLD ZIP-UP HOODIE 1 BLACK.png" draggable="false" />
-                <span class="product-name">NARCOWORLD Zip-up Hoodie (Style 2) Black</span>
-                <p class="product-price">$25.00</p>
+                <img src="assets/store/vinyl.png" draggable="false" />
+                <span class="product-name">NARCOWORLD ZIP-UP HOODIE 2.0</span>
+                <p class="product-price">$0.00</p>
             </a>
         </div>
     </section>
 
-    <!-- ARTISTS -->
     <section id="artists" class="page-section artists" style="display:none;">
         <div class="artist-grid">
-
             <a href="ethxnblxd" class="artist-card">
-                <img src="assets/artists/ethxnblxd/ethxnblxd.jpg" draggable="false" />
+                <img src="assets/artists/ethxnblxd/ethxnblxd.png" draggable="false" />
                 <span class="artist-name">@ethxnblxd</span>
             </a>
 
@@ -128,7 +118,6 @@
         </div>
     </section>
 
-    <!-- TOURS -->
     <section id="tours" class="page-section tours" style="display:none;">
         <div class="tour-cards">
             <div class="tour-card">
@@ -155,41 +144,33 @@
         </div>
     </div>
 
-    <!-- FOOTER -->
     <footer class="upper">
         © 2026 NARCOWORLD. All rights reserved. <br>
-        Designed by ethxnblxd. <br>
+        Designed by <a style="text-decoration: none; color: inherit; cursor: default;"> ethxnblxd</a>.
     </footer>
 
-    <!-- TAB LOGIC -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            // Function to open a specific page
             function openPage(pageId) {
-                // Hide all pages
                 document.querySelectorAll(".page-section").forEach(section => {
                     section.style.display = "none";
                 });
 
-                // Show the active page
                 const activePage = document.getElementById(pageId);
                 if (activePage) {
                     activePage.style.display = "block";
                 }
 
-                // Remove 'active' class from all buttons
                 document.querySelectorAll(".tab-btn").forEach(button => {
                     button.classList.remove("active");
                 });
 
-                // Add 'active' class to the clicked button
                 const activeButton = document.querySelector(`button[data-page="${pageId}"]`);
                 if (activeButton) {
                     activeButton.classList.add("active");
                 }
             }
 
-            // Default tab
             openPage("artists");
 
             const defaultButton = document.querySelector('button[data-page="artists"]');
@@ -197,7 +178,6 @@
                 defaultButton.classList.add("active");
             }
 
-            // Add event listeners to all tab buttons
             document.querySelectorAll('.tab-btn').forEach(button => {
                 button.addEventListener('click', (e) => {
                     const pageId = e.target.getAttribute('data-page');
@@ -208,31 +188,29 @@
     </script>
 
     <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const speed = 1; // pixels per frame
+        document.addEventListener("DOMContentLoaded", () => {
+            const speed = 1;
 
-        // Animate all marquees
-        document.querySelectorAll(".marquee-track").forEach(track => {
-            // Duplicate content to ensure continuous scrolling
-            const originalHTML = track.innerHTML;
-            while (track.scrollWidth < window.innerWidth * 3) {
-                track.innerHTML += originalHTML;
-            }
-
-            let x = 0;
-
-            function animate() {
-                x -= speed;
-                if (Math.abs(x) >= track.scrollWidth / 2) {
-                    x = 0;
+            document.querySelectorAll(".marquee-track").forEach(track => {
+                const originalHTML = track.innerHTML;
+                while (track.scrollWidth < window.innerWidth * 3) {
+                    track.innerHTML += originalHTML;
                 }
-                track.style.transform = `translateX(${x}px)`;
-                requestAnimationFrame(animate);
-            }
 
-            animate();
+                let x = 0;
+
+                function animate() {
+                    x -= speed;
+                    if (Math.abs(x) >= track.scrollWidth / 2) {
+                        x = 0;
+                    }
+                    track.style.transform = `translateX(${x}px)`;
+                    requestAnimationFrame(animate);
+                }
+
+                animate();
+            });
         });
-    });
     </script>
 </body>
 </html>
