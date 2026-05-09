@@ -16,11 +16,16 @@
 <body>
     <nav>
         <div class="logo upper">NARCOWORLD</div>
-        <!--
-        <a href="https://discord.gg/6T6umbqra8" class="discord-btn" target="_blank" rel="noopener">
-            <img src="https://imgs.search.brave.com/ESA8Flm6fNcnrADLLFjC_4ro-V3PVZ3l6ck2ge08Qak/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvcHJl/dmlld3MvMDY1LzM4/Ni81NDEvbm9uXzJ4/L2Rpc2NvcmQtd2hp/dGUtaWNvbi1sb2dv/LWFwcC10cmFuc3Bh/cmVudC1iYWNrZ3Jv/dW5kLXByZW1pdW0t/c29jaWFsLW1lZGlh/LWRlc2lnbi1mb3It/ZGlnaXRhbC1kb3du/bG9hZC1mcmVlLXBu/Zy5wbmc" draggable="false">
-        </a>
-        -->
+
+        <div class="nav-buttons">
+            <a onclick="openPopup('account-settings-popup')" class="nav-button">
+                <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" style="filter: invert();" draggable="false">
+            </a>
+
+            <a onclick="openPopup('shopping-cart-popup')" class="nav-button">
+                <img src="https://cdn-icons-png.flaticon.com/512/3514/3514491.png" style="filter: invert();" draggable="false">
+            </a>
+        </div>
     </nav>
 
     <script>
@@ -53,7 +58,7 @@
             <div class="sub upper">"Australian Underground"</div>
 
             <div class="tab-buttons">
-                <button onclick="openPage('store')" class="sub link tab-btn" data-page="store" disabled>
+                <button onclick="openPage('store')" class="sub link tab-btn" data-page="store">
                     Store
                 </button>
 
@@ -68,43 +73,22 @@
         </div>
     </section>
 
+    <div class="account-settings-popup">
+        <div class="account-settings-popup-box">
+            <span></span>
+        </div>
+    </div>
+
+    <div class="shopping-cart">
+    </div>
+
     <section id="store" class="page-section store" style="display:none;">
-        <!-- NEEDS AN ACTUAL FUNCTIONING STORE EMBEDDED IN THE FUTURE. -->
         <div class="store-grid">
-            <a href="#" class="product-card">
-                <img src="assets/store/vinyl.png" draggable="false" />
-                <span class="product-name">NARCOWORLD T-SHIRT</span>
+            <a href="products/narcoworld-t-shirt-version-1.0.html" class="product-card">
+                <img src="assets/store/NARCOWORLD T-SHIRT VERSION 1.0 WHITE.png" draggable="false" />
+                <span class="product-name">NARCOWORLD T-SHIRT VERSION 1.0</span>
                 <p class="product-price">$0.00</p>
-            </a>
-
-            <a href="#" class="product-card">
-                <img src="assets/store/vinyl.png" draggable="false" />
-                <span class="product-name">NARCOWORLD T-SHIRT 2.0</span>
-                <p class="product-price">$0.00</p>
-            </a>
-
-            <a href="#" class="product-card">
-                <img src="assets/store/vinyl.png" draggable="false" />
-                <span class="product-name">NARCOWORLD SWEATPANTS</span>
-                <p class="product-price">$25.00</p>
-            </a>
-
-            <a href="#" class="product-card">
-                <img src="assets/store/vinyl.png" draggable="false" />
-                <span class="product-name">NARCOWORLD HOODIE</span>
-                <p class="product-price">$0.00</p>
-            </a>
-
-            <a href="#" class="product-card">
-                <img src="assets/store/vinyl.png" draggable="false" />
-                <span class="product-name">NARCOWORLD HOODIE 2.0</span>
-                <p class="product-price">$0.00</p>
-            </a>
-
-            <a href="#" class="product-card">
-                <img src="assets/store/vinyl.png" draggable="false" />
-                <span class="product-name">NARCOWORLD ZIP-UP HOODIE 2.0</span>
-                <p class="product-price">$0.00</p>
+                <p class="product-status">Out of Stock</p>
             </a>
         </div>
     </section>
@@ -151,11 +135,17 @@
 
     <footer class="upper">
         © 2026 NARCOWORLD. All rights reserved. <br>
-        Designed by <a style="text-decoration: none; color: inherit; cursor: default;"> ethxnblxd</a>.
+        Designed by ethxnblxd.
     </footer>
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+            function openPopup(pageId) {
+                popuptab = document.getElementsByClassName(`".${pageId}"`);
+
+                popuptab.style.display = "block";
+            }
+
             function openPage(pageId) {
                 document.querySelectorAll(".page-section").forEach(section => {
                     section.style.display = "none";
