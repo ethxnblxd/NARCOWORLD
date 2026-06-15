@@ -302,7 +302,7 @@ nav .logo:hover {
 
 .artist-grid {
   display: grid;
-  grid-template-columns: repeat(2, 300px);
+  grid-template-columns: repeat(3, 300px);
   justify-content: center;
   gap: 4rem;
   padding: 0 2rem;
@@ -325,8 +325,8 @@ nav .logo:hover {
 }
 
 .artist-card img {
-  width: 100%;
-  height: auto;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   border-radius: 4px;
   margin-bottom: 1rem;
