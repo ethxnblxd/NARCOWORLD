@@ -1,3 +1,8 @@
+:root {
+    /*URL OF THE SONG IMAGE*/
+  --song-cover: url("https://distrokid.imgix.net/http%3A%2F%2Fgather.fandalism.com%2F10427767--E3B02130-B3B2-4EDC-8E215CE9074941AD--0--346819--cdb99f401f507e37012c71f65b30488b1.png?fm=jpg&q=75&w=800&s=099f77b35943766fa6d7237f167ebe0f");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +24,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: url("assets/artists/ethxnblxd/background.png") center/cover no-repeat;
+  background: var(--song-cover) center/cover no-repeat;
   filter: blur(50px);
   z-index: -2;
 }
@@ -57,7 +62,7 @@ nav::before {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: url("assets/artists/ethxnblxd/background.png") center/cover no-repeat;
+    background: var(--song-cover) center/cover no-repeat;
     filter: blur(50px);
     z-index: -1;
 }
